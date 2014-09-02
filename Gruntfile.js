@@ -384,7 +384,7 @@ module.exports = function (grunt) {
             },
             pages: {
                 options: {
-                    remote: 'git@github.com:srahmi/srahmi.github.com.git',
+                    remote: 'https://github.com/srahmi/srahmi.github.com.git',
                     branch: 'master'
                 }
             },
