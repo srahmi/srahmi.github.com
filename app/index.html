@@ -1,81 +1,145 @@
 <!doctype html>
-<html class="no-js">
-  <head>
+<html>
+<head>
+
     <meta charset="utf-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Saïd Rahmi – developer Paris, FR</title>
+
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-  </head>
-  <body ng-app="srahmigithubcomApp">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Acceuil</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">srahmigithubcom</h3>
-      </div>
+    <meta name="author" content="Saïd Rahmi">
+    <meta name="description" content="I likes the web development.">
+    <meta name="date" content="2013">
 
-      <div ng-view=""></div>
+    <style>
 
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
+        * {
+            box-sizing: border-box;
+        }
 
+        html, body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            vertical-align: baseline;
+            font-family: inherit;
+            font-size: 100%;
+            font-style: inherit;
+            font-weight: normal;
+            white-space:normal;
+            background: transparent;
+        }
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        body {
+            padding: 2em 2em 4em;
+            /* border-top: 1rem solid #F0F0F0; */
+            color:#111;
+            font:95%/1.3 "Courier New", monospace;
+            background: #fbfbfb;
+        }
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
+        @media (min-width: 25em) {
+            body {
+                padding: 2em 2.5em 4em;
+            }
+        }
 
-    <!-- build:js(.) scripts/oldieshim.js -->
-    <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]-->
-    <!-- endbuild -->
+        article { display:block; }
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/json3/lib/json3.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+        .content {
+            max-width: 55em;
+            margin: 0 auto;
+        }
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/about.js"></script>
-        <!-- endbuild -->
+        h1 {
+            font-size:18px;
+        }
+
+        .title {
+            margin-bottom: 1em;
+        }
+
+        @media (min-width: 25em) {
+            .title {
+                float: left;
+                margin-bottom: 0;
+                padding-right: 0.45em;
+                line-height:1;
+            }
+        }
+
+        p {
+            margin-bottom:1em;
+        }
+
+        a {
+            text-decoration:underline;
+            color:#777;
+        }
+
+        a:hover {
+            margin-bottom:-1px;
+            padding-bottom:1px;
+            background:#eee;
+        }
+
+        li a {
+            text-decoration:none;
+        }
+
+        .items-list {
+            margin: 2em 2em;
+        }
+
+        .items-list li {
+            margin-bottom: 0.5em;
+        }
+
+        .contact, .contact li {
+            list-style: none
+        }
+
+        .pic-mask {
+            min-width: 90px;
+            max-width: 300px;
+            width: 15%;
+            border-radius: 50%;
+            margin: 1em auto 3em;
+            overflow: hidden;
+        }
+
+        .pic-img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="pic-mask"><img class="pic-img" src="images/srahmi.png" alt="That's me."></div>
+
+<article class="content">
+    <h1 class="title">My name is Saïd Rahmi.</h1>
+
+    <p>I'm a freelance software developer living and working in Paris, FR. I focus on Java development and the technologies around it: JEE specification and frameworks like Spring and Hibernate.</p>
+
+    <p>I'm also interested in front-end web development and technologies orbiting it:JavaScript, responsive design, and tooling (mostly with node).</p>
+
+    <p>I'm currently well employed.</p>
+
+    <ul class="contact">
+        <li><a href="http://github.com/srahmi">Github</a>,</li>
+        <li><a href="mailto:rahmisaid@gmail.com">rahmisaid@gmail.com</a>,</li>
+        <li><a href="tel:0033770563705">+33 7 70 56 37 05</a></li>
+    </ul>
+
+</article>
+
 </body>
 </html>
