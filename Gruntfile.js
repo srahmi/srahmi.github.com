@@ -387,6 +387,12 @@ module.exports = function (grunt) {
                     remote: 'https://github.com/srahmi/srahmi.github.com.git',
                     branch: 'master'
                 }
+            },
+            local: {
+                options: {
+                    remote: '../',
+                    branch: 'build'
+                }
             }
         }
     });
